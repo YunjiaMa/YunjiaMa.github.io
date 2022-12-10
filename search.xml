@@ -73,7 +73,7 @@
       <link href="/2022/12/10/HTML/"/>
       <url>/2022/12/10/HTML/</url>
       
-        <content type="html"><![CDATA[<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><h3 id="标题标签和段落标签"><a href="#标题标签和段落标签" class="headerlink" title="标题标签和段落标签"></a>标题标签和段落标签</h3><table><thead><tr><th>语义</th><th>标签</th></tr></thead><tbody><tr><td>段落</td><td><p></p></td></tr><tr><td>换行</td><td><br/></td></tr></tbody></table><h3 id="文本格式化标签"><a href="#文本格式化标签" class="headerlink" title="文本格式化标签"></a>文本格式化标签</h3><table><thead><tr><th>语义</th><th>标签</th></tr></thead><tbody><tr><td>加粗</td><td><strong></strong>或者<b></b></td></tr><tr><td>倾斜</td><td><em></em>或者<i></i></td></tr><tr><td>删除线</td><td><del></del>或者<s></s></td></tr><tr><td>下划线</td><td><ins></ins>或者<u></u></td></tr></tbody></table><h3 id="盒子标签"><a href="#盒子标签" class="headerlink" title="盒子标签"></a>盒子标签</h3><table><thead><tr><th>标签</th><th>解释</th></tr></thead><tbody><tr><td><div></div></td><td>大盒子独占一行</td></tr><tr><td><span></span></td><td>小盒子占一小块</td></tr></tbody></table><h3 id="图片标签"><a href="#图片标签" class="headerlink" title="图片标签"></a>图片标签</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;图片名&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;啊哦(⊙o⊙)？哪里出错啦~&quot;</span> <span class="attr">title</span>=<span class="string">&quot;我是可爱的宝莉酱~(●&#x27;◡&#x27;●)~&quot;</span> <span class="attr">width</span>=<span class="string">&quot;500&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure><table><thead><tr><th>属性</th><th>属性值</th><th>说明</th></tr></thead><tbody><tr><td>src</td><td>图片路径</td><td>必须属性</td></tr><tr><td>alt</td><td>文本</td><td>替换文本。图像不能显示的文字</td></tr><tr><td>title</td><td>文本</td><td>提示文本。鼠标放到图像上，显示的文字</td></tr><tr><td>width</td><td>像素</td><td>设置图像的宽度</td></tr><tr><td>height</td><td>像素</td><td>设置图像的高度</td></tr><tr><td>border</td><td>像素</td><td>设置图像的边框粗细（一般在CSS设置）</td></tr></tbody></table><h3 id="图片路径"><a href="#图片路径" class="headerlink" title="图片路径"></a>图片路径</h3><h4 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h4><table><thead><tr><th>相对路径分类</th><th>符号</th><th>说明</th></tr></thead><tbody><tr><td>同一级路径</td><td></td><td>图像文件位于HTML文件同一级  如<img src="baidu.gif"/></td></tr><tr><td>下一级路径</td><td>&#x2F;</td><td>图像文件位于HTML文件下一级 如<img src="images/baidu.gif"/></td></tr><tr><td>上一级路径</td><td>..&#x2F;</td><td>图像文件位于HTML文件上一级 如<img src="../baidu.gif"/></td></tr></tbody></table><h4 id="绝对路径"><a href="#绝对路径" class="headerlink" title="绝对路径"></a>绝对路径</h4><p>例：”D:\web\images\logo.gif”或完整的网络地址“<a href="http://www.itcast.cn/images/logo.gif%E2%80%9D%E3%80%82">http://www.itcast.cn/images/logo.gif”。</a></p><h3 id="超链接标签⭐"><a href="#超链接标签⭐" class="headerlink" title="超链接标签⭐"></a>超链接标签⭐</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;跳转目标&quot;</span> <span class="attr">target</span>=<span class="string">&quot;目标窗口的弹出方式&quot;</span>&gt;</span>文本或图像<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure><table><thead><tr><th>属性</th><th>作用</th></tr></thead><tbody><tr><td>href</td><td>用于指定链接目标的url地址，（必须属性）当为标签应用href属性时，它就具有了超链接的功能</td></tr><tr><td>target</td><td>用于指定链接页面的打开方式，其中_self为默认值（当前窗口）， _blank为在新窗口中打开方式</td></tr></tbody></table><p>当href是一个文件或压缩包时，点击就会下载该文件。</p><p>图片网页链接：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://www.bilibili.com&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">scr</span>=<span class="string">&quot;image.jpg&quot;</span>/&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure><p>锚点链接：</p><p>~在锚点链接href属性值设置为“#名字”的形式。</p><p>~目标位置标签增加id&#x3D;“名字”。</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><h3 id="标题标签和段落标签"><a href="#标题标签和段落标签" class="headerlink" title="标题标签和段落标签"></a>标题标签和段落标签</h3><table><thead><tr><th>语义</th><th>标签</th></tr></thead><tbody><tr><td>段落</td><td>&lt; p&gt;&lt; &#x2F;p&gt;</td></tr><tr><td>换行</td><td>&lt; br&gt;&lt; &#x2F;br&gt;</td></tr></tbody></table><h3 id="文本格式化标签"><a href="#文本格式化标签" class="headerlink" title="文本格式化标签"></a>文本格式化标签</h3><table><thead><tr><th>语义</th><th>标签</th></tr></thead><tbody><tr><td>加粗</td><td>&lt; strong&gt;&lt; &#x2F;strong&gt;或者&lt; b&gt;&lt; &#x2F;b&gt;</td></tr><tr><td>倾斜</td><td>&lt; em&gt;&lt; &#x2F;em&gt;或者&lt; i&gt;&lt; &#x2F;i&gt;</td></tr><tr><td>删除线</td><td>&lt; del&gt;&lt; &#x2F;del&gt;或者&lt; s&gt;&lt; &#x2F;s&gt;</td></tr><tr><td>下划线</td><td>&lt; ins&gt;&lt; &#x2F;ins&gt;或者&lt; u&gt;&lt; &#x2F;u&gt;</td></tr></tbody></table><h3 id="盒子标签"><a href="#盒子标签" class="headerlink" title="盒子标签"></a>盒子标签</h3><table><thead><tr><th>标签</th><th>解释</th></tr></thead><tbody><tr><td>&lt; div&gt;&lt; &#x2F;div&gt;</td><td>大盒子独占一行</td></tr><tr><td>&lt; span&gt;&lt; &#x2F;span&gt;</td><td>小盒子占一小块</td></tr></tbody></table><h3 id="图片标签"><a href="#图片标签" class="headerlink" title="图片标签"></a>图片标签</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;图片名&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;啊哦(⊙o⊙)？哪里出错啦~&quot;</span> <span class="attr">title</span>=<span class="string">&quot;我是可爱的宝莉酱~(●&#x27;◡&#x27;●)~&quot;</span> <span class="attr">width</span>=<span class="string">&quot;500&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure><table><thead><tr><th>属性</th><th>属性值</th><th>说明</th></tr></thead><tbody><tr><td>src</td><td>图片路径</td><td>必须属性</td></tr><tr><td>alt</td><td>文本</td><td>替换文本。图像不能显示的文字</td></tr><tr><td>title</td><td>文本</td><td>提示文本。鼠标放到图像上，显示的文字</td></tr><tr><td>width</td><td>像素</td><td>设置图像的宽度</td></tr><tr><td>height</td><td>像素</td><td>设置图像的高度</td></tr><tr><td>border</td><td>像素</td><td>设置图像的边框粗细（一般在CSS设置）</td></tr></tbody></table><h3 id="图片路径"><a href="#图片路径" class="headerlink" title="图片路径"></a>图片路径</h3><h4 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h4><table><thead><tr><th>相对路径分类</th><th>符号</th><th>说明</th></tr></thead><tbody><tr><td>同一级路径</td><td></td><td>图像文件位于HTML文件同一级</td></tr><tr><td>下一级路径</td><td>&#x2F;</td><td>图像文件位于HTML文件下一级</td></tr><tr><td>上一级路径</td><td>..&#x2F;</td><td>图像文件位于HTML文件上一级</td></tr></tbody></table><h4 id="绝对路径"><a href="#绝对路径" class="headerlink" title="绝对路径"></a>绝对路径</h4><p>例：”D:\web\images\logo.gif”或完整的网络地址“<a href="http://www.itcast.cn/images/logo.gif%E2%80%9D%E3%80%82">http://www.itcast.cn/images/logo.gif”。</a></p><h3 id="超链接标签⭐"><a href="#超链接标签⭐" class="headerlink" title="超链接标签⭐"></a>超链接标签⭐</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;跳转目标&quot;</span> <span class="attr">target</span>=<span class="string">&quot;目标窗口的弹出方式&quot;</span>&gt;</span>文本或图像<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure><table><thead><tr><th>属性</th><th>作用</th></tr></thead><tbody><tr><td>href</td><td>用于指定链接目标的url地址，（必须属性）当为标签应用href属性时，它就具有了超链接的功能</td></tr><tr><td>target</td><td>用于指定链接页面的打开方式，其中_self为默认值（当前窗口）， _blank为在新窗口中打开方式</td></tr></tbody></table><p>当href是一个文件或压缩包时，点击就会下载该文件。</p><p>图片网页链接：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://www.bilibili.com&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">scr</span>=<span class="string">&quot;image.jpg&quot;</span>/&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure><p>锚点链接：</p><p>~在锚点链接href属性值设置为“#名字”的形式。</p><p>~目标位置标签增加id&#x3D;“名字”。</p>]]></content>
       
       
       
@@ -82,6 +82,17 @@
     
   
   
+    
+    
+    <entry>
+      <title>电影</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
     
     
     <entry>
@@ -107,17 +118,6 @@
     
     
     <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>tags</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
@@ -129,9 +129,9 @@
     
     
     <entry>
-      <title>电影</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
