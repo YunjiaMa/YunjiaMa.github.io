@@ -4,7 +4,20 @@
   
     
     <entry>
-      <title></title>
+      <title>C++笔记</title>
+      <link href="/2022/12/10/C++%E7%AC%94%E8%AE%B0/"/>
+      <url>/2022/12/10/C++%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="C-笔记"><a href="#C-笔记" class="headerlink" title="C++笔记"></a>C++笔记</h1><h2 id="一、类和对象"><a href="#一、类和对象" class="headerlink" title="一、类和对象"></a>一、类和对象</h2><h3 id="Ⅰ、构造函数"><a href="#Ⅰ、构造函数" class="headerlink" title="Ⅰ、构造函数"></a>Ⅰ、构造函数</h3><p>①<strong>没有返回值</strong>。</p><p>②可写在类体内，也可写在类体外（一般<strong>习惯在类体外</strong>写）。</p><p>③一般声明为公有成员，在定义对象时被<strong>自动调用</strong>，只执行一次。</p><p>④可以不带参数。</p><p>⑤不仅可对数据成员赋初值，还可以包含其他语句。</p><p><strong>第一种初始化数据成员的方法：</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Triangle</span>&#123;             <span class="comment">//声明三角形类Triangle </span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"> <span class="built_in">Triangle</span>(<span class="type">double</span> h,<span class="type">double</span> d);</span><br><span class="line"> <span class="function"><span class="type">void</span> <span class="title">showT_area</span><span class="params">()</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"><span class="type">double</span> height;</span><br><span class="line"><span class="type">double</span> di;</span><br><span class="line"><span class="type">double</span> area;</span><br><span class="line">&#125;; </span><br><span class="line">Triangle::<span class="built_in">Triangle</span>(<span class="type">double</span> h,<span class="type">double</span> d)&#123;            <span class="comment">//在结构体外定义数据成员变量</span></span><br><span class="line">cout&lt;&lt;<span class="string">&quot;Constructing...&quot;</span>&lt;&lt;endl;</span><br><span class="line">height=h;</span><br><span class="line">di=d;</span><br><span class="line">area=height*di*<span class="number">0.5</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Triangle::showT_area</span><span class="params">()</span></span>&#123;</span><br><span class="line">cout&lt;&lt;<span class="string">&quot;高：&quot;</span>&lt;&lt;height&lt;&lt;<span class="string">&quot;  &quot;</span>&lt;&lt;<span class="string">&quot;底：&quot;</span>&lt;&lt;di&lt;&lt;<span class="string">&quot;  &quot;</span>&lt;&lt;<span class="string">&quot;面积：&quot;</span>&lt;&lt;area&lt;&lt;endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="function">Triangle <span class="title">t1</span><span class="params">(<span class="number">4.0</span>,<span class="number">3.0</span>)</span></span>;</span><br><span class="line">t1.<span class="built_in">showT_area</span>();</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;                  <span class="comment">//主函数到此结束 </span></span><br></pre></td></tr></table></figure><p><strong>另一种初始化数据成员的方法：</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">D</span>&#123;</span><br><span class="line"><span class="type">int</span> mem1;</span><br><span class="line"><span class="type">int</span> mem2;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="built_in">D</span>(<span class="type">int</span> i):<span class="built_in">mem2</span>(i),<span class="built_in">mem1</span>(mem2+<span class="number">1</span>)           <span class="comment">//（本例中错误）先运算函数体内的语句，后执行“：”后的初始化变量 </span></span><br><span class="line">&#123;</span><br><span class="line">cout &lt;&lt;<span class="string">&quot;mem1:&quot;</span>&lt;&lt;mem1&lt;&lt;endl;</span><br><span class="line">cout&lt;&lt;<span class="string">&quot;mem2:&quot;</span>&lt;&lt;mem2&lt;&lt;endl;</span><br><span class="line">&#125;</span><br><span class="line">&#125;; </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="function">D <span class="title">d</span><span class="params">(<span class="number">15</span>)</span></span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数学建模编程笔记</title>
       <link href="/2022/12/10/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
       <url>/2022/12/10/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/</url>
       
@@ -17,7 +30,7 @@
     
     
     <entry>
-      <title></title>
+      <title>数据结构课程笔记</title>
       <link href="/2022/12/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
       <url>/2022/12/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/</url>
       
@@ -30,7 +43,7 @@
     
     
     <entry>
-      <title></title>
+      <title>R语言实验笔记</title>
       <link href="/2022/12/10/R%E8%AF%AD%E8%A8%80%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/"/>
       <url>/2022/12/10/R%E8%AF%AD%E8%A8%80%E5%AE%9E%E9%AA%8C%E7%AC%94%E8%AE%B0/</url>
       
@@ -43,7 +56,7 @@
     
     
     <entry>
-      <title></title>
+      <title>Python基础笔记</title>
       <link href="/2022/12/10/Python%E7%AC%94%E8%AE%B0/"/>
       <url>/2022/12/10/Python%E7%AC%94%E8%AE%B0/</url>
       
@@ -56,7 +69,7 @@
     
     
     <entry>
-      <title></title>
+      <title>Java习题</title>
       <link href="/2022/12/10/Java%E4%B9%A0%E9%A2%98/"/>
       <url>/2022/12/10/Java%E4%B9%A0%E9%A2%98/</url>
       
@@ -69,7 +82,7 @@
     
     
     <entry>
-      <title></title>
+      <title>HTML笔记</title>
       <link href="/2022/12/10/HTML/"/>
       <url>/2022/12/10/HTML/</url>
       
@@ -109,17 +122,6 @@
     
     
     <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>电影</title>
       <link href="/movies/index.html"/>
       <url>/movies/index.html</url>
@@ -131,9 +133,9 @@
     
     
     <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -142,9 +144,20 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
